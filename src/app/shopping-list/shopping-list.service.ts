@@ -7,6 +7,7 @@ import {Http} from "@angular/http";
 export class ShoppingListService {
   ingredientsChanged = new Subject<Ingredient[]>();
   startedEditing = new Subject<number>();
+  var = "nothing";
   constructor(private http: Http) {}
   private ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
@@ -31,6 +32,7 @@ export class ShoppingListService {
     // for (let ingredient of ingredients) {
     //   this.addIngredient(ingredient);
     // }
+
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.next(this.ingredients.slice());
   }
