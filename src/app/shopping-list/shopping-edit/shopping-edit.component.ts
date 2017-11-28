@@ -45,11 +45,11 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
     if (this.editMode) {
       this.slService.updateIngredient(this.editedItemIndex, newIngredient);
     } else {
-      this.slService.addIngredient(newIngredient)
-        .subscribe(
-          (response) => console.log(response),
-          (error) => console.log(error)
-        );
+      // this.slService.addIngredient(newIngredient)
+      //   .subscribe(
+      //     (response) => console.log(response),
+      //     (error) => console.log(error)
+      //   );
     }
     this.editMode = false;
     form.reset();
