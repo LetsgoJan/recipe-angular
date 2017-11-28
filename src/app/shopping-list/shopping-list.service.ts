@@ -23,9 +23,9 @@ export class ShoppingListService {
   }
 
   addIngredient(ingredient: Ingredient) {
-    // this.ingredients.push(ingredient);
-    // this.ingredientsChanged.next(this.ingredients.slice());
-    return this.http.post('https://recipenode.herokuapp.com/api/ingredient', ingredient);
+    this.ingredients.push(ingredient);
+    this.ingredientsChanged.next(this.ingredients.slice());
+    // return this.http.post('https://recipenode.herokuapp.com/api/ingredient', ingredient);
   }
 
   addIngredients(ingredients: Ingredient[]) {
